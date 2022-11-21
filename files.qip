@@ -1,5 +1,29 @@
-set_global_assignment -name VERILOG_FILE rtl/lfsr.v
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/cos.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rtl/mycore.v
-set_global_assignment -name SDC_FILE mycore.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE mycore.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE Arcade-ExpressRaider.sv
+set_global_assignment -name VERILOG_FILE rtl/core.v
+set_global_assignment -name VERILOG_FILE rtl/er_decode.v
+set_global_assignment -name QIP_FILE rtl/pll.qip
+set_global_assignment -name VERILOG_FILE rtl/prot.v
+set_global_assignment -name VERILOG_FILE rtl/audio/acpu_mem.v
+set_global_assignment -name VERILOG_FILE rtl/audio/audio.v
+set_global_assignment -name VERILOG_FILE rtl/audio/mc6809i.v
+set_global_assignment -name QIP_FILE rtl/audio/ym2203/jt12.qip
+set_global_assignment -name QIP_FILE rtl/audio/ym3526/jt26.qip
+set_global_assignment -name VERILOG_FILE rtl/cpu/CPU16.v
+set_global_assignment -name VERILOG_FILE rtl/cpu/mcpu.v
+set_global_assignment -name VERILOG_FILE rtl/cpu/mcpu_rom.v
+
+set_global_assignment -name QIP_FILE rtl/cpu/6502/chip_6502.qip
+
+set_global_assignment -name VERILOG_FILE rtl/cpu/fast6502/cpu6502.v
+set_global_assignment -name VERILOG_FILE rtl/cpu/fast6502/ALU.v
+
+set_global_assignment -name VERILOG_FILE rtl/mem/dpram.v
+set_global_assignment -name VERILOG_FILE rtl/mem/ram.v
+set_global_assignment -name VERILOG_FILE rtl/tools/clk_en.v
+set_global_assignment -name VERILOG_FILE rtl/tools/falling_edge.v
+set_global_assignment -name VERILOG_FILE rtl/tools/rising_edge.v
+set_global_assignment -name VERILOG_FILE rtl/video/hvgen.v
+set_global_assignment -name VERILOG_FILE rtl/video/vdata.v
+set_global_assignment -name VERILOG_FILE rtl/video/video.v
+set_global_assignment -name VERILOG_FILE rtl/video/VSC30.v
