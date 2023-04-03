@@ -8,7 +8,7 @@ module audio(
   input         ioctl_wr,
   input         snd_write,
   input   [7:0] mcpu_dout,
-  output [15:0] sound_mix
+  output [18:0] sound_mix
 );
 
 wire cen_e, cen_q, clk_e, clk_q;
@@ -81,7 +81,7 @@ clk_en #( 31 ) m2h_en(clk_q,  cen_6,  clk_6);
 clk_en #( 15 ) m1h_en(clk_q, cen_12, clk_12);
 
 // all
-assign sound_mix = ym3526_snd[15:0] + ym2203_snd[15:0] + ym2203_psg[15:0];
+assign sound_mix = ym3526_snd[15:0] + ym2203_snd[15:0] + { ym2203_psg[15:0], 1'b0 };
 
 wire [15:0] ym2203_snd;
 wire [15:0] ym2203_psg;

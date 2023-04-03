@@ -24,7 +24,7 @@ module core(
   output       hs,
   output       ce_pix,
 
-  output [15:0] sound
+  output [18:0] sound
 
 );
 
